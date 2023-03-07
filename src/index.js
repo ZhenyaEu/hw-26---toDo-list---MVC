@@ -120,8 +120,7 @@ class Model {
 
     removeNote(idNote) {
         this.request.deleteNote(idNote, this.token);
-        //При === появляется баг с задержкой рендеринга, не могу разобраться из-за чего так происходит, при == всё ok
-        // eslint-disable-next-line eqeqeq
+        // eslint-disable-next-line
         this.list = this.list.filter(({_id}) => _id != idNote);
     }
 }
